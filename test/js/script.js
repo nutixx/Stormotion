@@ -59,7 +59,7 @@ function playerTurn(matchesToTake) {
 
   else {
     disableButtons(btnsContainer);
-    setTimeout(computerTurn, 1000); // Хід комп'ютера через 1 секунду
+    setTimeout(computerTurn, 500); // Хід комп'ютера через 0,5 секунди
   }
 }
 
@@ -77,6 +77,7 @@ const computerSwitch = document.getElementById('computer_switch');
 switchDiv.addEventListener('click', (event) => {
   const target = event.target;
   if(target.tagName === 'BUTTON' && !target.classList.contains('active')){
+    setTimeout(reset, 1000);
     if(target == playerSwitch){
       computerSwitch.classList.remove('active');
       playerSwitch.classList.add('active');
@@ -85,9 +86,8 @@ switchDiv.addEventListener('click', (event) => {
       playerSwitch.classList.remove('active');
       computerSwitch.classList.add('active');
       disableButtons(btnsContainer);
-      setTimeout(computerTurn, 2000);
+      setTimeout(computerTurn, 1000);
     }
-    setTimeout(reset, 1000);
   }
 })
 
