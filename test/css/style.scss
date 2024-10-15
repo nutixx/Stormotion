@@ -8,10 +8,17 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+}
+
+.switch-wrap {
+  .match-button {
+    font-size: 18px;
+  }
 }
 
 .game-container {
@@ -26,6 +33,34 @@ body {
 
 h1 {
   color: #333;
+  margin-bottom: 20px;
+}
+
+.stats {
+  border-top: 1px solid #ddd;
+  padding: 15px 0 0;
+  color: #333;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-around;
+  font-size: 25px;
+
+  &-computer {
+    display: flex;
+    gap: 5px;
+    align-items: end;
+  }
+
+  &-player {
+    display: flex;
+    gap: 5px;
+    flex-direction: row-reverse;
+    align-items: end;
+  }
+
+  p {
+    scale: 1.15;
+  }
 }
 
 .status {
@@ -52,4 +87,8 @@ h1 {
 
 .match-button:hover {
   background-color: #0056b3;
+}
+
+.active {
+  border: 3px solid rgb(192, 192, 192);
 }

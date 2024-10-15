@@ -11,13 +11,23 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
-    <style>
-        
-    </style>
 </head>
+
 <body>
+    <div class="switch-wrap">
+        <button class="match-button active" id="player_switch">&#128100; first</button>
+        <button class="match-button" id="computer_switch">&#128187; first</button>
+    </div>
     <div class="game-container">
         <h1>&#128293;25 Matches&#128293;</h1>
+        <div class="stats">
+            <div class="stats-computer"><span>&#128187;</span>
+                <p></p>
+            </div>
+            <div class="stats-player"><span>&#127942;</span>
+                <p></p>
+            </div>
+        </div>
         <div class="status" id="status">Залишилось 25 сірників</div>
         <div class="buttons-container">
             <button class="match-button" value=1>1 сірник</button>
@@ -26,4 +36,5 @@
         </div>
     </div>
 </body>
+
 </html>
